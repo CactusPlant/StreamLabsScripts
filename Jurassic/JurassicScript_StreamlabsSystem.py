@@ -121,8 +121,8 @@ def FeedDino(data):
 				name = name[:-1].lower()
 				if name in dinos.keys():
 					d = dinos[name]
-					if d.fed < 6000:
-						Parent.SendTwitchMessage(("[DISPENSING FOOD...] "+d.name+"has accepted nourishment").upper())
+					if d.fed < 12000:
+						Parent.SendTwitchMessage(("[DISPENSING FOOD...] "+d.name+" has accepted nourishment").upper())
 						d.fed = d.fed + 6000
 						d.fed = 18000 if d.fed > 18000 else d.fed
 					else:
@@ -210,5 +210,5 @@ class Dinosaur:
 		self.fed = 15000
 
 	def reduceFeed(self):
-		if self.fed <= 0:
+		if self.fed > 0:
 			self.fed -= 1
