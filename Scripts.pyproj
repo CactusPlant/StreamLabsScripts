@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91d69b62-f84d-4886-bde1-dd2da7562186}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Jackbox\Jackbox_StreamlabsSystem.py" />
+    <Compile Include="Jurassic\JurassicScript_StreamlabsSystem.py" />
+    <Compile Include="MarioParty3\MarioParty3Integration_StreamlabsSystem.py" />
+    <Compile Include="MarioParty3\MP3i_StreamlabsSystem1.0.py" />
+    <Compile Include="Script_Pokemon\Pokebot_StreamlabsSystem.py" />
+    <Compile Include="Thirsty1.0\General_StreamlabsSystem.py" />
+    <Compile Include="Thirsty1.0\Jackbox_StreamlabsSystem.py" />
+    <Compile Include="Thirsty1.0\MarioParty3Integration_StreamlabsSystem.py" />
+    <Compile Include="Thirsty1.0\MP3i_StreamlabsSystem1.0.py" />
+    <Compile Include="ThirstyBot\General_StreamlabsSystem.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MarioParty3\commands.txt" />
+    <Content Include="MarioParty3\output.txt" />
+    <Content Include="Thirsty1.0\commands.txt" />
+    <Content Include="Thirsty1.0\output.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Jackbox" />
+    <Folder Include="Jurassic" />
+    <Folder Include="MarioParty3" />
+    <Folder Include="Script_Pokemon" />
+    <Folder Include="Thirsty1.0" />
+    <Folder Include="ThirstyBot" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
