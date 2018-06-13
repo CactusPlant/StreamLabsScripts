@@ -87,7 +87,7 @@ def AddDino(data):
 
 def InfoDino(data):
 	if data.IsChatMessage() and data.IsFromTwitch():
-		if data.GetParam(0).lower() == "!dino" and Parent.HasPermission(data.User,m_CommandPermission,m_CommandInfo) and data.GetParamCount() > 1:
+		if data.GetParam(0).lower() == "!dino" and data.GetParamCount() > 1:
 			if len(dinos) > 0:
 				name = ""
 				for s in range(1, data.GetParamCount()):
@@ -111,7 +111,7 @@ def InfoDino(data):
 
 def FeedDino(data):
 	if data.IsChatMessage() and data.IsFromTwitch():
-		if data.GetParam(0).lower() == "!dinofeed" and Parent.HasPermission(data.User,m_CommandPermission,m_CommandInfo) and data.GetParamCount() > 1:
+		if data.GetParam(0).lower() == "!dinofeed" and data.GetParamCount() > 1:
 			if len(dinos) > 0:
 				name = ""
 				for s in range(1, data.GetParamCount()):
